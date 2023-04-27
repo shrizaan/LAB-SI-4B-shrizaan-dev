@@ -1,0 +1,458 @@
+/* :root {
+  --white: #E3E2E9;
+  --light: #C7C5B4;
+  --dark: ;
+  --primary: #FF7E33;
+  --secondary: #4F2781;
+  --body: #2A233E;
+  /* gradient from: #0f172a
+     gradient to: #6b21a8 */
+/* --black:  */
+/* } */
+
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --primary: #6b21a8;
+    --bg-primary: #2a233e;
+    --bg-secondary: #0f172a;
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #fcaf82;
+    --magenta: #e310cb;
+    --aqua: #6bf4ea;
+    --white: #F8FAFC;
+    --font-size: 1.2rem;
+    --mono: 'Oxygen mono', monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    font-family: var(--sans);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.name .dot-style {
+    color: #FF849A;
+    display: inline;
+}
+
+/* bg image */
+.starfield {
+    background-image: url("img/stars.png");
+    background-repeat: repeat;
+    -webkit-mask-image: url("img/stars-mask.webp");
+    mask-image: url("img/stars-mask.webp");
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+}
+
+/* border bottom gradient */
+
+.logo-wrapper .gradient-border {
+    background: linear-gradient(90deg, rgba(255, 23, 228, 1) 0%, rgba(134, 251, 251, 1) 100%);
+    height: 5px;
+    width: 100%;
+    margin: -8px auto 0;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.gradient-border {
+    background: linear-gradient(90deg, rgba(255, 23, 228, 1) 30%, rgba(134, 251, 251, 1) 100%);
+    height: 4px;
+    width: 100%;
+}
+
+/* background color element */
+.bg-primary-gradient {
+    background-image: linear-gradient(to bottom, #0f172a, #6b21a8);
+}
+
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+    background-color: #0f172a;
+}
+
+.bg-contact {
+    background-color: var(--dkblue);
+}
+
+.bg-planet {
+    position: absolute;
+    pointer-events: none;
+    top: -5rem;
+    right: 0;
+    width: 50rem;
+    height: 50rem;
+    background-image: url("img/planet1.4e1725b9.svg");
+    background-repeat: no-repeat;
+    background-position: left 30rem bottom;
+    background-size: 100% 100%;
+    /*z-index: -1;*/
+    opacity: .35;
+}
+
+/* button element */
+.button {
+    text-decoration: none;
+    background-image: linear-gradient(180deg, #205eff, #c238bd);
+    color: var(--white);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 580;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all .3s;
+}
+
+.button:hover {
+    background-image: linear-gradient(180deg, #6d39ff, #af43ff);
+    color: var(--white);
+    transform: scale(1.07);
+}
+
+/* link reset */
+
+a {
+    color: var(--aqua);
+}
+
+a:hover {
+    color: var(--white);
+    text-decoration: none;
+    transition: all .3s;
+}
+
+
+
+/* navbar section */
+
+nav {
+    font-family: var(--mono);
+    padding: 4rem 1.5rem;
+    font-size: 80%;
+}
+
+nav .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav .logo-image-wrapper {
+    margin-right: 1rem;
+    position: relative;
+}
+
+nav .logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+nav .logo-img:hover {
+    transform: scale(1.05);
+    transition: all .3s;
+}
+
+nav .logo-name {
+    font-family: var(--sans);
+    color: var(--white);
+}
+
+nav .logo-name:hover {
+    color: var(--aqua);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+}
+
+nav [class*="fa-"] {
+    color: var(--aqua);
+}
+
+nav [class*="fa-"]:hover {
+    color: var(--white);
+    transition: all .3s;
+}
+
+nav li a:hover {
+    color: var(--aqua);
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+/* Intro Section */
+
+#intro {
+    position: relative;
+    max-width: 1200px;
+    padding: 4rem 1.5rem 6rem;
+    margin: 0 auto;
+}
+
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0;
+
+}
+
+#intro .name {
+    font-family: var(--mono);
+    background: none;
+}
+
+.name span {
+    font-family: var(--sans);
+    color: var(--aqua);
+    font-size: 4rem;
+}
+
+#intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+
+/* Project Section */
+#projects {
+    max-width: 1200px;
+    padding: 4rem 1.5rem;
+    margin: 0 auto;
+}
+
+#projects > h2 {
+    font-size: 2rem;
+    margin-bottom: calc(2rem * 1.5);
+}
+
+
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border-top: 1px solid var(--aqua);
+    border-right: 1px solid var(--aqua);
+    padding: .5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-info > p {
+    font-size: 1rem;
+}
+
+.project-status {
+    font-family: var(--mono);
+    margin: 0;
+}
+
+.project-title {
+    color: var(--aqua);
+    font-size: 1.5rem;
+}
+
+.project-info .project-description {
+    background-color: var(--bg-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-description > a {
+    color: #e310cb;
+    transition: all .3s;
+}
+
+.project-description > a:hover {
+    color: #b106b1;
+}
+
+.project-description + p {
+    margin: 0 0 .3rem ;
+}
+
+.tech-list {
+    color: var(--aqua);
+    margin: .7rem 0;
+    justify-content: start;
+    font-size: 1rem;
+    gap: 1rem;
+    font-family: var(--mono);
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-radius: 25px;
+    border-top: 1px solid var(--aqua);
+    border-left: 1px solid var(--aqua);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+@media (min-width: 850px) {
+    .project-card {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
+    }
+    .project-card .project-info {
+        grid-column: 5/11;
+        grid-row: 1/2;
+        order: 2;
+        border: none;
+        text-align: right;
+    }
+    .tech-list {
+        justify-content: end;
+    }
+    .project-card .project-image {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+
+    .project-info:nth-child(even) {
+        align-items: start;
+    }
+    .project-card:nth-child(even) .project-info {
+        text-align: left;
+        grid-column: 1/6;
+    }
+    .project-card:nth-child(even)  .project-image {
+        grid-column: 5/11;
+    }
+
+    .project-card:nth-child(even) .tech-list {
+        justify-content: start;
+    }
+}
+
+/* contact section */
+
+#contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+}
+
+#contact h2 {
+    font-family: var(--mono);
+}
+
+#contact p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+/* Footer Section */
+footer {
+    padding: 3rem 0;
+    background-color: #0f172a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer h2 {
+    font-family: var(--mono);
+    text-align: center;
+}
+
+.footer-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+}
+
+@media (min-width: 576px) {
+    .footer-title {
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+
+
+
+/* Responsive Design */
+@media (min-width: 850px) {
+    nav, #intro, #projects, #contact {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+    
+    /*#intro {*/
+    /*    padding: 4rem 3rem 8rem;*/
+    /*}*/
+
+    /*#projects, #contact {*/
+    /*    padding: 4rem 3rem;*/
+    /*}*/
+}
