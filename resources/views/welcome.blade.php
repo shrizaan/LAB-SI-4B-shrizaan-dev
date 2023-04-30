@@ -72,8 +72,8 @@
     <section id="intro">
         <div class="starfield"></div>
 
-        <p class="name">Hi, my name is <br> <span>Shahrizan<span class="dot-style">.</span></span></p>
-        <h2>Web Developer</h2>
+        <p class="name">Hi, my name is <br> <span>Shahrizan</span></p>
+        <h2 class="red-title">Web Developer</h2>
         <p>
             A highly motivated student currently majoring in Information Systems at
             Sriwijaya University. <br/>
@@ -98,7 +98,7 @@
                     <p class="project-status"><b>Latest Project</b></p>
                     <h3 class="project-title">Full-Stack Javascript Developer Website Travel</h3>
                     <p class="project-description">This project is focused on developing skills in MERN Stack web application development. It covers various key components such as learning to use ReactJS library, creating APIs with NodeJS & ExpressJS, building reusable components from scratch, and using MongoDB to process non-sequel databases. Additionally, the project also emphasizes understanding UI/UX in building an online hotel booking website and usability testing to analyze user behavior on the website.
-
+<br/><br/>
 The project is designed for Full-Stack JavaScript Developers who want to enhance their skills in MERN Stack development. All tools used in the project are free and can be used on any operating system. The project starts with designing the website, including conducting research and creating information architecture. After that, participants will create a wireframe for a rough idea of the design.</p>
                     <p><b>Technologies used include:</b></p>
                     <ul class="tech-list">
@@ -124,9 +124,7 @@ The project is designed for Full-Stack JavaScript Developers who want to enhance
                     <p class="project-status"><b>College Assigment Project</b></p>
                     <h3 class="project-title">E-Commerce Site</h3>
                     <p class="project-description">This project is a website that serves as an e-commerce platform and was created using HTML, CSS, JavaScript, and Bootstrap CSS framework. The purpose of the project was to fulfill a web programming class assignment. The website has five pages: Home, About, Shop, News, and Contact.
-
-The Home page gives a quick overview of the website and its products, while the About page provides information about the company that owns the website. The Shop page displays all the available products and allows users to add items to their cart and proceed to checkout. The News page provides the latest updates on the company and its products. Lastly, the Contact page allows users to get in touch with the company through a contact form.
-
+<br/><br/>
 This project enables students to showcase their web development skills by building a fully functional and visually appealing website. Bootstrap CSS provides a responsive design that ensures the website is accessible from any device. Overall, this project is an excellent opportunity for students to apply their knowledge in web development to a practical scenario.</p>
                     <ul class="tech-list">
                         <li>
@@ -149,8 +147,7 @@ This project enables students to showcase their web development skills by buildi
         </div>
     </section>
 </div>
-
-
+  
 <!-- Contact Section -->
 <div class="gradient-border"></div>
 <div class="bg-contact">
@@ -160,11 +157,40 @@ This project enables students to showcase their web development skills by buildi
         <p>
             If you would like to contact me, please feel free to email me.
             <br/>
-            I will do my best to respond to your message as soon as possible.
+            I will do my best to respond to your message <br/> as soon as possible.
             <br/>
             Thank you for visiting my web portfolio!
         </p>
-        <a class="button" href="#">Email Me</a>
+      <div class="contact__container container grid">
+          <form action="" class="contact__form grid">
+            <div class="contact__inputs grid">
+              <div class="contact__content">
+                <label for="name" class="contact__label">Name</label>
+                <input type="text" id="name" class="contact__input" />
+              </div>
+              <div class="contact__content">
+                <label for="email" class="contact__label">Email</label>
+                <input type="email" id="email" class="contact__input" />
+              </div>
+            </div>
+            <div class="contact__content">
+              <label for="message" class="contact__label">Message</label>
+              <textarea
+                name=""
+                id="message"
+                cols="0"
+                rows="4"
+                class="contact__input"
+              ></textarea>
+            </div>
+
+            <div style="display: flex;">
+              <a href="#" class="button button--flex">
+                Send Message
+              </a>
+            </div>
+          </form>
+        </div>
     </section>
 </div>
 <div class="gradient-border"></div>
@@ -173,7 +199,7 @@ This project enables students to showcase their web development skills by buildi
 <!-- Footer Section -->
 <div class="bg-secondary">
     <footer>
-        <h2 class="footer-title">Shahrizan<span>&boxbox;</span><span>Web Developer</span></h2>
+        <h2 class="footer-title">Shahrizan<span><i class="fa-sharp fa-solid fa-code" style="color: #7b12fd;"></i></span><span>Web Developer</span></h2>
         <ul>
             <li>
                 <a
@@ -201,7 +227,7 @@ This project enables students to showcase their web development skills by buildi
                 <span class="sr-only">Email</span>
             </a></li>
         </ul>
-        <p><small>&copy; 2022 Shahrizan. All rights reserved.</small></p>
+        <p><small>&copy; 2023 Shahrizan. All rights reserved.</small></p>
     </footer>
 </div>
 </body>
